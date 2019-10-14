@@ -1,14 +1,15 @@
 #https://classroom.udacity.com/courses/ud120/lessons/2254358555/concepts/24196685390923
 #Solution for this
+import numpy as np
+X = np.array([[-1, -1], [-2, -1], [-3, -2], [1, 1], [2, 1], [3, 2]])
+Y = np.array([1, 1, 1, 2, 2, 2])
 from sklearn.naive_bayes import GaussianNB
-def classify(features_train, labels_train):   
-    ### import the sklearn module for GaussianNB
-    ### create classifier
-    ### fit the classifier on the training features and labels
-    ### return the fit classifier
-    
-    
-    ### your code goes here!
-    clf = GaussianNB()
-    clf.fit(features_train, labels_train)
-    return clf
+clf = GaussianNB()
+clf.fit(X, Y)
+
+print(clf.predict([[-0.8, -1]]))
+
+clf_pf = GaussianNB()
+clf_pf.partial_fit(X, Y, np.unique(Y))
+
+print(clf_pf.predict([[-0.8, -1]]))

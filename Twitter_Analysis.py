@@ -2,11 +2,11 @@ import tweepy
 from textblob import TextBlob
 
 ## Predicting analysis and sentiment from series of tweets
-consumer_key='AS3kobyASHOimBqvzMwvVmFWf'
-consumer_secret='cQveuw0EpNJUZWK3PVGP9M1BO0FCJEUXCWHhc6pZRtajJzLvIB'
+consumer_key='1'
+consumer_secret='1'
 
-access_token ='143710382-Ql1RDJHk0J31MRofPIINtRzn0jI4sqVTfPst6TIC'
-access_token_secret='LWX1PadDfZp0wxkUWFOC5HB30tLt3b6CpKRaSb0Ta0cKd'
+access_token ='143710382-1'
+access_token_secret='1'
 
 auth=tweepy.OAuthHandler(consumer_key,consumer_secret)
 auth.set_access_token(access_token,access_token_secret)
